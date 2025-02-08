@@ -24,7 +24,7 @@ local ProtectGui = protectgui or (syn and syn.protect_gui) or function() end
 
 WindUI.ScreenGui = New("ScreenGui", {
     Name = "WindUI",
-    Parent = RunService:IsStudio() and LocalPlayer.PlayerGui or gethui and gethui() or game.CoreGui,
+    Parent = get_hidden_gui and get_hidden_gui() or gethui and gethui(),
     IgnoreGuiInset = true,
 }, {
     New("Folder", {
